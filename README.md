@@ -1,18 +1,18 @@
-# Instructor Sleepy
+# Instructor Sleepy 😴
 
 ## Overview
 This Java program simulates a scenario where a instructor assists students with programming tasks in a small office. The instructor alternates between helping students and taking naps. Students arrive at the office seeking assistance, and if the instructor is available, they get help; otherwise, they wait or return later.
 
-## Features
+## Features 🚀
 - **instructor and Students Threads**: The instructor and each student are represented as separate threads in the program.
 - **Semaphore Usage**: Semaphores are utilized to control access to shared resources such as chairs and to manage the synchronization between the instructor and students.
 - **Queue**: A queue is used to maintain the order of students waiting for assistance from the instructor.
 - **Randomized Wait Times**: Both students and the instructor have randomized wait times to simulate realistic behavior.
 
-## How to Run
+## How to Run ▶️
 To execute the program, simply compile and run the `App.java` file. The program will automatically create a instructor and a specified number of students. Students will arrive at random intervals and either receive assistance or wait in the corridor if the instructor is busy.
 
-## Example Output
+## Example Output 📝
  ``` bash
 Instructor is sleeping
 The instructor has woken up
@@ -59,9 +59,8 @@ Instructor has helped the student 10
 No more students waiting, Instructor is sleeping
  ```
 
-
-## Authors
-
-* Diana Balanta
-* Danna Espinosa
-* George Trujillo
+## Authors 👨‍💻
+Created by: 
+* [Diana Balanta](https://github.com/DianaLBS) 👩🏻‍💻
+* [Danna Espinosa](https://github.com/DannaAEspinosa) 👩🏽‍💻
+* [George Trujillo](https://github.com/GeorgeU2030) 👨🏻‍💻
