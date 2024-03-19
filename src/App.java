@@ -7,9 +7,9 @@ public class App {
 
         // Crear estudiantes
         for (int i = 1; i <= numStudents; i++) {
-    Student student = new Student(i, monitor);
+            Student student = new Student(i, monitor);
             student.start();
-                    Thread.sleep((int) (Math.random() * 2000)); // Simular tiempo de llegada aleatorio de los estudiantes
-                    }
-                    }
-                    }
+            Thread.sleep((int) (Math.random() * 2000)); // Simular tiempo de llegada aleatorio de los estudiantes
+        }
+    }
+}

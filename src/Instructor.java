@@ -50,13 +50,4 @@ class Instructor {
         }
         mutex.release();
     }
-
-    public void monitorSleep() throws InterruptedException {
-        System.out.println("Instructor is sleeping");
-        monitorSleeping.acquire(); // Esperar hasta que se despierte el monitor
-    }
-    public void wakeUpMonitor() {
-        System.out.println("Instructor ha sido despertado");
-        monitorSleeping.release(); // Despertar al monitor
-    }
 }
