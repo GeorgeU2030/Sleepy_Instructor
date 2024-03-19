@@ -11,8 +11,8 @@ class Student extends Thread {
     public void run() {
         try {
             instructor.studentArrived(id);
-            Thread.sleep((int) (Math.random() * 1500)); // Simular tiempo de programación aleatorio
-            instructor.studentLeft(id);
+            Thread.sleep((int) (Math.random() * 4000))        ; // Simular tiempo de programación aleatorio
+            instructor.studentLeft();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

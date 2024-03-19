@@ -14,11 +14,15 @@ class Instructor {
     public void studentArrived(int id) throws InterruptedException {
         mutex.acquire();
         if (studentCount == 0) {
+            if(studentQueue.isEmpty()){
+                System.out.println("The instructor has woken up");
+            }
             System.out.println("Arrive the student " + id);
             System.out.println("Instructor is helping the student " + id);
-
             studentCount++;
+            lastStudentId=id;
             mutex.release();
+
         } else if (studentCount < 4) {
             System.out.println("Busy Instructor, arrive the student " + id);
             chairAvailable.acquire();
@@ -30,13 +34,15 @@ class Instructor {
         } else {
             System.out.println("Arrive the student " + id + " 3 chairs occupied - back to programming");
             mutex.release();
+            Thread.sleep(2000);
+            studentArrived(id);
         }
     }
 
-    public void studentLeft(int id) throws InterruptedException {
+    public void studentLeft() throws InterruptedException {
         mutex.acquire();
         studentCount--;
-        System.out.println("Instructor has helped the student " + id);
+        System.out.println("Instructor has helped the student " + lastStudentId);
 
         chairAvailable.release();
         if (!studentQueue.isEmpty()) { // Si hay estudiantes esperando en la cola

@@ -3,7 +3,7 @@ public class App {
         Instructor monitor = new Instructor();
         System.out.println("Instructor is sleeping");
 
-        int numStudents = 5;
+        int numStudents = 10;
 
         // Crear estudiantes
         for (int i = 1; i <= numStudents; i++) {
